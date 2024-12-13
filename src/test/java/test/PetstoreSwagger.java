@@ -65,7 +65,7 @@ public class PetstoreSwagger {
                 .put("/pet")
                 .then()
                 .statusCode(200)
-                .body("name", equalTo("FatihG"))
+                .body("name", equalTo("Fatih"))
                 .body("status", equalTo("sold"));
     }
 
