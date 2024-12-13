@@ -21,7 +21,7 @@ public class PetstoreSwagger {
     @Test (priority = 1)
     public void CreateTest() {
         Map<String, Object> create = new HashMap<>();
-        create.put("id", 3535);
+        create.put("id", id);
         create.put("name", "Fatih");
         create.put("status", "available");
 
@@ -54,7 +54,7 @@ public class PetstoreSwagger {
     @Test (priority = 3)
     public void UpdateTest() {
         Map<String, Object> update = new HashMap<>();
-        update.put("id", 3535);
+        update.put("id", id);
         update.put("name", "Fatih");
         update.put("status", "sold");
 
