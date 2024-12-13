@@ -40,19 +40,20 @@ public class PetstoreSwagger {
 
     @Test (priority = 2)
     public void GetByIdTest() {
-        int petId = id;
+
 
         given()
                 .when()
-                .get("/pet/" + petId)
+                .get("/pet/" + id)
                 .then()
                 .statusCode(200)
-                .body("id", equalTo(petId))
+                .body("id", equalTo(id))
                 .body("name", equalTo("Fatih"));
     }
 
     @Test (priority = 3)
     public void UpdateTest() {
+
         Map<String, Object> update = new HashMap<>();
         update.put("id", id);
         update.put("name", "FatihG");
@@ -71,14 +72,13 @@ public class PetstoreSwagger {
 
     @Test (priority = 4)
     public void DeleteTest() {
-        int deleteId = id;
 
         given()
                 .when()
-                .delete("/pet/" + deleteId)
+                .delete("/pet/" + id)
                 .then()
                 .statusCode(200)
-                .body("message", equalTo(String.valueOf(deleteId)));
+                .body("message", equalTo(String.valueOf(id)));
 
     }
 
