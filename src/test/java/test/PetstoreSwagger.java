@@ -35,7 +35,7 @@ public class PetstoreSwagger {
                 .body("name", equalTo("Fatih"))
                 .extract().response();
 
-        Assert.assertEquals(response.jsonPath().getInt("id"), 3535);
+        Assert.assertEquals(response.jsonPath().getInt("id"), id);
     }
 
     @Test (priority = 2)
@@ -55,7 +55,7 @@ public class PetstoreSwagger {
     public void UpdateTest() {
         Map<String, Object> update = new HashMap<>();
         update.put("id", id);
-        update.put("name", "Fatih");
+        update.put("name", "FatihG");
         update.put("status", "sold");
 
         given()
@@ -65,7 +65,7 @@ public class PetstoreSwagger {
                 .put("/pet")
                 .then()
                 .statusCode(200)
-                .body("name", equalTo("Fatih"))
+                .body("name", equalTo("FatihG"))
                 .body("status", equalTo("sold"));
     }
 
