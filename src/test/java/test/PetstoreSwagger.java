@@ -41,7 +41,6 @@ public class PetstoreSwagger {
     @Test (priority = 2)
     public void GetByIdTest() {
 
-
         given()
                 .when()
                 .get("/pet/" + id)
