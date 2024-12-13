@@ -16,6 +16,7 @@ public class PetstoreSwagger {
     static {
         RestAssured.baseURI = "https://petstore.swagger.io/v2";
     }
+    int id = 3535;
 
     @Test (priority = 1)
     public void CreateTest() {
@@ -39,7 +40,7 @@ public class PetstoreSwagger {
 
     @Test (priority = 2)
     public void GetByIdTest() {
-        int petId = 3535;
+        int petId = id;
 
         given()
                 .when()
@@ -53,8 +54,8 @@ public class PetstoreSwagger {
     @Test (priority = 3)
     public void UpdateTest() {
         Map<String, Object> update = new HashMap<>();
-        update.put("id", 35355);
-        update.put("name", "FatihG");
+        update.put("id", 3535);
+        update.put("name", "Fatih");
         update.put("status", "sold");
 
         given()
@@ -70,7 +71,7 @@ public class PetstoreSwagger {
 
     @Test (priority = 4)
     public void DeleteTest() {
-        int deleteId = 35355;
+        int deleteId = id;
 
         given()
                 .when()
